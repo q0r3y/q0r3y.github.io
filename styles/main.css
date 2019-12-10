@@ -7,6 +7,9 @@
 
 **/
 
+    #background{z-index: -1; position: fixed; padding-top: 320px; padding-right:25px;  height: 50%; width: 50%;
+    transform: rotate(90deg);}
+
     body{letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier;
     font-weight: 400; font-size: 17px; color: #c8c8c8; background: #222; width: 95%; max-width: 960px;}
 
@@ -28,16 +31,16 @@
     main{height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: 1fr auto; grid-gap: 15px; margin-bottom: 15px;}    
 
-    .about{text-align: center; grid-column: 1 / -1; border: 1px #fff solid;}
-    .github1{text-align: center; border: 1px #fff solid;}
-    .blogSnip{text-align: center; border: 1px #fff solid;}
-    .github2{text-align: center; border: 1px #fff solid;}
+    .about{text-align: center; grid-column: 1 / -1; border: 1px #fff solid; background: #222;}
+    .github1{text-align: center; border: 1px #fff solid; background: #222;}
+    .blogSnip{text-align: center; border: 1px #fff solid; background: #222;}
+    .github2{text-align: center; border: 1px #fff solid; background: #222;}
 
-    .blog{grid-column: 1 / -1; text-align: center; border: 1px #fff solid;}
+    .blog{grid-column: 1 / -1; text-align: center; border: 1px #fff solid; background: #222;}
 
 /** PROJECT PAGE **/
 
-    .project{max-width: 100%; grid-column: 1 / -1; text-align: center; border: 1px #fff solid;}
+    .project{max-width: 100%; grid-column: 1 / -1; text-align: center; border: 1px #fff solid; background: #222;}
 
     .displaypicture{display: none;}
 
