@@ -7,6 +7,8 @@
 
     :root { --linkColor: #be8a59; }
 
+    *::selection {background: var(--linkColor)}
+
     #background {z-index: -1; position: fixed; padding-top: 320px; padding-right:25px;  height: 50%; width: 50%;
     transform: rotate(90deg);}
 
