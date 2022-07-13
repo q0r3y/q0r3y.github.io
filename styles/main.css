@@ -5,7 +5,7 @@
 
 **************************************************************/
 
-    :root { --linkColor: #be8a59; }
+    :root { --linkColor: #be8a59; --gridGap: 0.75em; }
 
     *::selection {background: var(--linkColor)}
 
@@ -19,25 +19,42 @@
 
     header {padding: 1% 0 1% 0; text-align: right; margin: 1.333% 0 1.333% 0; border-bottom: 1px #fff solid;}
     header a {text-decoration: none; color: #fff; font-size: 110%;}
-    a:hover:link {color: #fff; text-decoration: overline; color: var(--linkColor)}
     header a.current {color: #fff; text-decoration: overline;}
+    .link:hover {color: var(--linkColor); text-decoration: overline;}
 
 /** HEADER END **/
 
-    h1 {text-decoration: none; color: #fff; font-size: 105%; font-weight: normal;}
+    h1 {margin-bottom: 0; text-decoration: none; color: #fff; font-size: 105%; font-weight: normal;}
     h1 a {text-decoration: none; color: #fff; font-size: 100%; font-weight: normal;}
-    h1 a:hover {color: #fff; text-decoration: overline;}
 
 /** GRID **/
 
     main {height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr auto auto; grid-gap: 15px; margin-bottom: 15px;}
+    grid-template-rows: 1fr auto auto; grid-gap: var(--gridGap); margin-bottom: 15px;}
 
     .about {text-align: center; grid-column: 1 / -1; border: 1px #fff solid; background: #222; padding: 0 10px 0 10px}
-    .github {text-align: center; border: 1px #fff solid; background: #222; padding: 0 10px 0 10px}
-    .github p {margin: 0;}
-    .github p a {color: var(--linkColor)}
-    .github p a:hover {color: white}
+
+    .repos {
+        display: grid; 
+        grid-template-rows: auto repeat(4, auto); 
+        grid-gap: var(--gridGap);
+
+
+        text-align: center; border: 1px #fff solid; background: #222; 
+        padding: 0 0.75em 0.75em 0.75em;
+        
+    }
+
+    .repo {
+        text-align: left;
+        margin-bottom: 0;
+        padding: 0;
+        border: 1px #fff solid;
+    }
+
+    .repo p {margin: .1em; padding: .1em;}
+    .repo a {margin: .1em; padding: .1em; text-decoration: none; color: #fff;}
+
     .blogSnip {text-align: center; border: 1px #fff solid; background: #222; padding: 0 10px 0 10px}
     .projectSnip {text-align: center; grid-column: 1 / -1; border: 1px #fff solid; background: #222; padding: 0 10px 0 10px}
 
@@ -51,7 +68,7 @@
     .displaypicture {display: none;}
 
     .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
-    grid-gap: 10px; overflow-x: scroll; grid-auto-flow: column;}
+    grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column;}
 
 /** PROJECT PAGE END **/
 /** GRID END **/
@@ -60,7 +77,7 @@
 
 @media only screen and (max-width:725px) {
 
-    main {margin-top: 15px; display:grid; grid-template-columns: 1fr; grid-template-rows: 1fr auto; grid-gap: 15px;
+    main {margin-top: 15px; display:grid; grid-template-columns: 1fr; grid-template-rows: 1fr auto; grid-gap: var(--gridGap);
     margin-bottom: 15px;}
 
     .about {text-align: center; grid-column: 1 / -1; border: 1px #fff solid;}

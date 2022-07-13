@@ -2,7 +2,7 @@ let repoData = [];
 
 async function getRepos() {
     const sortedRepos = await fetch(
-        'https://api.github.com/users/q0r3y/repos?sort=updated', {
+        'https://api.github.com/users/q0r3y/repos?sort=updated&per_page=4', {
         method: 'GET'
     });
     await sortedRepos.json().then((data) => {
@@ -11,16 +11,27 @@ async function getRepos() {
 }
 
 function postRepos() {
-    $latestWork = document.getElementById('repos');
+    $latestWork = document.getElementsByClassName('repos')[0];
     repoData.forEach(element => {
         console.log(element);
-        lastPush = new Date(element.pushed_at);
-        const $repoA = document.createElement('a');
-        const $repoP = document.createElement('p');
-        $repoA.innerText += lastPush.toLocaleDateString("en-US");
-        $repoA.innerText += element.html_url;
-        $repoP.appendChild($repoA);
-        $latestWork.appendChild($repoP);
+        const $repoDiv = document.createElement('div');
+        const $repoName = document.createElement('a');
+        const $repoLang = document.createElement('p');
+        const $repoDesc = document.createElement('p');
+        const $repoUpdated = document.createElement('p');
+        const lastPush = new Date(element.pushed_at).toLocaleDateString("en-US");
+        $repoDiv.className = "repo";
+        $repoName.className = "link";
+        $repoName.href = element.html_url;
+        $repoName.innerText = element.name;
+        $repoLang.innerText = element.language;
+        $repoDesc.innerText = element.description;
+        $repoUpdated.innerText = `Updated: ${lastPush}`;
+        $repoDiv.appendChild($repoName);
+        $repoDiv.appendChild($repoLang);
+        $repoDiv.appendChild($repoDesc);
+        $repoDiv.appendChild($repoUpdated);
+        $latestWork.appendChild($repoDiv);
     });
 }
 
