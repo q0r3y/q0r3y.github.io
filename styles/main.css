@@ -10,7 +10,7 @@
 
     *::selection {background: var(--highlightColor)}
 
-    #background {z-index: -1; position: fixed; padding-top: 19em; height: 50%; width: 50%; transform: rotate(90deg); 
+    #background {z-index: -1; position: fixed; padding-top: 19em; height: 40%; width: 40%; transform: rotate(90deg); 
     filter: invert(32%) sepia(42%) saturate(4916%) hue-rotate(344deg) brightness(78%) contrast(106%);}
 
     body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier;
@@ -72,7 +72,6 @@
     .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; 
     background: var(--mainColor); padding: 0 10px 0 10px;}
     .project p {padding: 0 10px 0 10px; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
-
     .projectImage {display: none; padding-top: 0.75em;}
 
     .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
@@ -87,7 +86,6 @@
 @media only screen and (max-width:725px) {
     main {margin-top: 15px; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
     grid-gap: var(--gridGap); margin-bottom: 15px;}
-
     #background {display: none;}
 
     #about {grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}
@@ -96,9 +94,7 @@
     #portraitMobile {display: block; width: 11em; height: 11em; float: right;}
     #repos {grid-row: 2; grid-column: 1/-1;}
     #blogSnip {grid-row: 3; grid-row: 3; border: 1px var(--textColor1) solid; grid-column: 1/-1;}
-    #blogSnip p {max-height: 10em;}
     #projectSnip {grid-row:4; grid-column: 1/-1;}
-    #projectSnip p {max-height: 10em;}
 
     .projectImage {display:block; margin: auto; width: 90%; height: auto;}
     .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
