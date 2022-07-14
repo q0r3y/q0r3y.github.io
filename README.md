@@ -1,1 +1,0 @@
-# corey.sh source code
