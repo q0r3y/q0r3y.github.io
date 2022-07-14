@@ -50,7 +50,7 @@
     .repo p {margin: .15em; padding: .1em;}
     .repo a {margin: .15em; padding: .1em; text-decoration: none; color: var(--textColor1);}
     .repoLang {justify-self: start;}
-    .repoUpdated {justify-self: end;}
+    .repoUpdated {justify-self: end; color: var(--textColor1);}
     .repoDesc {grid-column: 1/-1;}
 
     #blogSnip {grid-column: 3/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
@@ -88,23 +88,21 @@
     main {margin-top: 15px; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
     grid-gap: var(--gridGap); margin-bottom: 15px;}
 
+    #background {display: none;}
+
     #about {grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}
     #about h1 {text-align: left;}
     #portrait {grid-column: 1/-1; grid-row: 1; display: none;}
+    #portraitMobile {display: block; width: 11em; height: 11em; float: right;}
     #repos {grid-row: 2; grid-column: 1/-1;}
     #blogSnip {grid-row: 3; grid-row: 3; border: 1px var(--textColor1) solid; grid-column: 1/-1;}
+    #blogSnip p {max-height: 10em;}
     #projectSnip {grid-row:4; grid-column: 1/-1;}
+    #projectSnip p {max-height: 10em;}
 
     .projectImage {display:block; margin: auto; width: 90%; height: auto;}
     .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
-    .card {display: none;}
-
-    #portraitMobile {
-        display: block;
-        width: 11em;
-        height: 11em;
-        float: right;
-    }
+    .card {display: none;}    
 }
 
 @media only screen and (max-width: 500px) {

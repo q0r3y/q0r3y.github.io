@@ -38,7 +38,7 @@ function postRepos() {
         const $repoUpdated = document.createElement('p');
         const $repoLang = document.createElement('p');
         const $repoDesc = document.createElement('p');
-        const lastPush = new Date(element.pushed_at).toLocaleDateString("en-US");
+        const lastPush = new Date(element.pushed_at);
 
         $repoDiv.classList.add("repo");
         $repoName.classList.add("link");
@@ -48,7 +48,7 @@ function postRepos() {
 
         $repoName.href = element.html_url;
         $repoName.innerText = element.name;
-        $repoUpdated.innerText = `Updated: ${lastPush}`;
+        $repoUpdated.innerText = `${lastPush.getFullYear()}_${lastPush.getMonth()}_${lastPush.getDate()}`;
         $repoLang.innerText = element.language;
         $repoLang.style.color = setColor(element.language);
         $repoDesc.innerText = element.description;
