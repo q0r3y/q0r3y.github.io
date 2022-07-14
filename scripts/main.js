@@ -29,7 +29,7 @@ const setColor = function (language) {
 }
 
 function postRepos() {
-    $latestWork = document.getElementsByClassName('repos')[0];
+    $latestWork = document.getElementById('repos');
     repoData.forEach(element => {
         console.log(element);
 

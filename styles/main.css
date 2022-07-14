@@ -11,7 +11,7 @@
     *::selection {background: var(--highlightColor)}
 
     #background {z-index: -1; position: fixed; padding-top: 19em; height: 50%; width: 50%; transform: rotate(90deg); 
-        filter: invert(32%) sepia(42%) saturate(4916%) hue-rotate(344deg) brightness(78%) contrast(106%);}
+    filter: invert(32%) sepia(42%) saturate(4916%) hue-rotate(344deg) brightness(78%) contrast(106%);}
 
     body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier;
     font-weight: 400; font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; 
@@ -27,21 +27,22 @@
     h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
     h1 a {text-decoration: none; color: var(--textColor1); font-size: 100%; font-weight: normal;}
     span {float: right;}
+    /* p {text-align: left;} */
 
 /** GRID **/
 
     main {height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto; grid-gap: var(--gridGap); margin-bottom: 15px;}
 
-    .about {text-align: center; grid-column: 3fr; border: 1px var(--textColor1) solid; background: var(--mainColor); 
+    #about {grid-column: 3fr; border: 1px var(--textColor1) solid; background: var(--mainColor); 
     padding: 0 10px 0 10px; grid-column: 1/4;}
-    .about h1 {text-align: center;}
+    #portraitMobile {display: none;}
 
-    #self {border: 1px var(--textColor1) solid; grid-column: 4/-1;}
-    #self img {width: 14em; height: 14em;}
+    #portrait {border: 1px var(--textColor1) solid; grid-column: 4/-1;}
+    #portrait img {width: 14em; height: 14em;}
 
-    .repos {grid-column: 1/3; display: grid; grid-template-rows: auto repeat(4, auto); grid-gap: var(--gridGap); 
-    text-align: center; border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 0.75em 0.75em 0.75em;}
+    #repos {grid-column: 1/3; display: grid; grid-template-rows: auto repeat(4, auto); grid-gap: var(--gridGap); 
+    border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 0.75em 0.75em 0.75em;}
 
     .repo {display: grid; text-align: left; grid-template-rows: auto auto auto; grid-template-columns: auto auto;
     margin-bottom: 0; padding: 0; border: 1px var(--textColor1) solid;}
@@ -52,27 +53,27 @@
     .repoUpdated {justify-self: end;}
     .repoDesc {grid-column: 1/-1;}
 
-    .blogSnip {grid-column: 3/-1; text-align: center; border: 1px var(--textColor1) solid; background: var(--mainColor); 
+    #blogSnip {grid-column: 3/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
     padding: 0 10px 0 10px;}
-    .blogSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
+    #blogSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
 
-    .projectSnip {text-align: center; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
+    #projectSnip { grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
     padding: 0 10px 0 10px;}
-    .projectSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
+    #projectSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
 
 /** BLOG PAGE **/
 
-    .blog {grid-column: 1/-1; text-align: center; border: 1px var(--textColor1) solid; background: var(--mainColor); 
+    .blog {grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
     padding: 0 10px 0 10px;}
     .blog p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
     
 /** PROJECT PAGE **/
 
-    .project {max-width: 100%; grid-column: 1/-1; text-align: center; border: 1px var(--textColor1) solid; 
+    .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; 
     background: var(--mainColor); padding: 0 10px 0 10px;}
     .project p {padding: 0 10px 0 10px; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
 
-    .displaypicture {display: none; padding-top: 0.75em;}
+    .projectImage {display: none; padding-top: 0.75em;}
 
     .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
     grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column; padding-top: 0.75em;}
@@ -84,19 +85,26 @@
     width: 2.5em; height: 2.5em;}
 
 @media only screen and (max-width:725px) {
-    main {margin-top: 15px; display:grid; grid-template-columns: 1fr; grid-template-rows: repeat(4, auto); 
+    main {margin-top: 15px; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
     grid-gap: var(--gridGap); margin-bottom: 15px;}
 
-    .about {text-align: center; grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}
-    #self {grid-column: 1/-1; grid-row: 1;}
-    #self img {width: 10em; height: 10em;}
-    .github1 {text-align: center; grid-column: 1/-1; border: 1px var(--textColor1) solid;}
-    .blogSnip {text-align: center; grid-column: 1/-1; border: 1px var(--textColor1) solid;}
-    .github2 {text-align: center; grid-column: 1/-1; border: 1px var(--textColor1) solid;}
+    #about {grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}
+    #about h1 {text-align: left;}
+    #portrait {grid-column: 1/-1; grid-row: 1; display: none;}
+    #repos {grid-row: 2; grid-column: 1/-1;}
+    #blogSnip {grid-row: 3; grid-row: 3; border: 1px var(--textColor1) solid; grid-column: 1/-1;}
+    #projectSnip {grid-row:4; grid-column: 1/-1;}
 
-    .displaypicture {display:block; margin: auto; width: 90%; height: auto;}
-    .project {max-width: 100%; grid-template-columns: 1fr; text-align: center; border: 1px var(--textColor1) solid;}
+    .projectImage {display:block; margin: auto; width: 90%; height: auto;}
+    .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
     .card {display: none;}
+
+    #portraitMobile {
+        display: block;
+        width: 11em;
+        height: 11em;
+        float: right;
+    }
 }
 
 @media only screen and (max-width: 500px) {
