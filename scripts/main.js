@@ -16,21 +16,27 @@ function postRepos() {
         console.log(element);
         const $repoDiv = document.createElement('div');
         const $repoName = document.createElement('a');
+        const $repoUpdated = document.createElement('p');
         const $repoLang = document.createElement('p');
         const $repoDesc = document.createElement('p');
-        const $repoUpdated = document.createElement('p');
         const lastPush = new Date(element.pushed_at).toLocaleDateString("en-US");
-        $repoDiv.className = "repo";
-        $repoName.className = "link";
+
+        $repoDiv.classList.add("repo");
+        $repoName.classList.add("link");
+        $repoDesc.classList.add("repoDesc");
+        $repoUpdated.classList.add("repoUpdated");
+        $repoLang.classList.add("repoLang");
+
         $repoName.href = element.html_url;
         $repoName.innerText = element.name;
+        $repoUpdated.innerText = `Updated: ${lastPush}`;
         $repoLang.innerText = element.language;
         $repoDesc.innerText = element.description;
-        $repoUpdated.innerText = `Updated: ${lastPush}`;
+
         $repoDiv.appendChild($repoName);
+        $repoDiv.appendChild($repoUpdated);
         $repoDiv.appendChild($repoLang);
         $repoDiv.appendChild($repoDesc);
-        $repoDiv.appendChild($repoUpdated);
         $latestWork.appendChild($repoDiv);
     });
 }
