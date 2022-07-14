@@ -10,10 +10,29 @@ async function getRepos() {
     });
 }
 
+const setColor = function (language) {
+    if (language === "C++") {
+        return "#d3869b"
+    } else if (language === "JavaScript") {
+        return "#fabd2f"
+    } else if (language === "C#") {
+        return "#b8bb26"
+    } else if (language === "Python") {
+        return "#83a598"
+    } else if (language === "PowerShell") {
+        return "#83a598"
+    } else if (language === "Java") {
+        return "#d79921"
+    } else {
+        return "#8ec07c"
+    }
+}
+
 function postRepos() {
     $latestWork = document.getElementsByClassName('repos')[0];
     repoData.forEach(element => {
         console.log(element);
+
         const $repoDiv = document.createElement('div');
         const $repoName = document.createElement('a');
         const $repoUpdated = document.createElement('p');
@@ -31,6 +50,7 @@ function postRepos() {
         $repoName.innerText = element.name;
         $repoUpdated.innerText = `Updated: ${lastPush}`;
         $repoLang.innerText = element.language;
+        $repoLang.style.color = setColor(element.language);
         $repoDesc.innerText = element.description;
 
         $repoDiv.appendChild($repoName);
