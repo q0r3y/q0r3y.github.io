@@ -9,7 +9,7 @@
 
     *::selection {background: var(--linkColor)}
 
-    #background {z-index: -1; position: fixed; padding-top: 320px; padding-right:25px;  height: 50%; width: 50%;
+    #background {z-index: -1; position: fixed; padding-top: 19em; height: 50%; width: 50%;
     transform: rotate(90deg);}
 
     body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier;
@@ -65,15 +65,16 @@
     .project {max-width: 100%; grid-column: 1 / -1; text-align: center; border: 1px #fff solid; background: #222;}
     .project p {padding: 0 10px 0 10px;}
 
-    .displaypicture {display: none;}
+    .displaypicture {display: none; padding-top: 0.75em;}
 
     .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
-    grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column;}
+    grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column; padding-top: 0.75em;}
 
 /** PROJECT PAGE END **/
 /** GRID END **/
 
     footer {text-align: right; border-top: 1px #fff solid; padding-top: 10px; padding-bottom: 10px}
+    .social {width: 2.5em; height: 2.5em;}
 
 @media only screen and (max-width:725px) {
 
