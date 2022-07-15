@@ -17,8 +17,6 @@
     font-weight: 400; font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; 
     max-width: 960px;}
 
-/** HEADER **/
-
     header {padding: 1% 0 1% 0; text-align: right; margin: 1.333% 0 1.333% 0; border-bottom: 1px var(--textColor1) solid;}
     header a {text-decoration: none; color: var(--textColor1); font-size: 110%;}
     header a.current {color: var(--linkColor); text-decoration: overline;}
@@ -27,57 +25,9 @@
     h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
     h1 a {text-decoration: none; color: var(--textColor1); font-size: 100%; font-weight: normal;}
     span {float: right;}
-    /* p {text-align: left;} */
-
-/** GRID **/
 
     main {height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto; grid-gap: var(--gridGap); margin-bottom: 15px;}
-
-    #about {grid-column: 3fr; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px; grid-column: 1/4;}
-    #portraitMobile {display: none;}
-
-    #portrait {border: 1px var(--textColor1) solid; grid-column: 4/-1;}
-    #portrait img {width: 14em; height: 14em;}
-
-    #repos {grid-column: 1/3; display: grid; grid-template-rows: auto repeat(4, auto); grid-gap: var(--gridGap); 
-    border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 0.75em 0.75em 0.75em;}
-
-    .repo {display: grid; text-align: left; grid-template-rows: auto auto auto; grid-template-columns: auto auto;
-    margin-bottom: 0; padding: 0; border: 1px var(--textColor1) solid;}
-
-    .repo p {margin: .15em; padding: .1em;}
-    .repo a {margin: .15em; padding: .1em; text-decoration: none; color: var(--textColor1);}
-    .repoLang {justify-self: start;}
-    .repoUpdated {justify-self: end; color: var(--textColor1);}
-    .repoDesc {grid-column: 1/-1;}
-
-    #blogSnip {grid-column: 3/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px;}
-    #blogSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
-
-    #projectSnip { grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px;}
-    #projectSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
-
-/** BLOG PAGE **/
-
-    .blog {grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px;}
-    .blog p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
-    
-/** PROJECT PAGE **/
-
-    .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor);}
-    .project > * {padding: 0 10px 0 10px;}
-    .project p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
-    .projectImage {display: none; padding-top: 0.75em;}
-
-    .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
-    grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column; padding-top: 0.75em;}
-
-/** FOOTER **/
 
     footer {text-align: right; border-top: 1px var(--textColor1) solid; padding-top: 10px; padding-bottom: 10px}
     .social {filter: invert(73%) sepia(15%) saturate(444%) hue-rotate(356deg) brightness(83%) contrast(85%);
