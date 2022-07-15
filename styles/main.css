@@ -6,7 +6,7 @@
 **************************************************************/
 
     :root {--linkColor: #fe8019; --highlightColor: #689d6a; --mainColor: #282828; --textColor1: #928374; 
-    --textColor2: #c8c8c8; --gridGap: 0.75em; --langColor: #b16286;}
+    --textColor2: #c8c8c8; --langColor: #b16286;}
 
     *::selection {background: var(--highlightColor)}
 
@@ -27,7 +27,7 @@
     span {float: right;}
 
     main {height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto; grid-gap: var(--gridGap); margin-bottom: 15px;}
+    grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 15px;}
 
     footer {text-align: right; border-top: 1px var(--textColor1) solid; padding-top: 10px; padding-bottom: 10px}
     .social {filter: invert(73%) sepia(15%) saturate(444%) hue-rotate(356deg) brightness(83%) contrast(85%);
@@ -35,7 +35,7 @@
 
 @media only screen and (max-width:725px) {
     main {margin-top: 15px; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
-    grid-gap: var(--gridGap); margin-bottom: 15px;}
+    grid-gap: 0.75em; margin-bottom: 15px;}
     #background {display: none;}
 
     #about {grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}
