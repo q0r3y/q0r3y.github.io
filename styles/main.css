@@ -98,7 +98,9 @@
 
     .projectImage {display:block; margin: auto; width: 90%; height: auto;}
     .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
-    .card {display: none;}    
+    .card {display: none;}  
+    
+    .social {width: 4em; height: 4em;}
 }
 
 @media only screen and (max-width: 500px) {
