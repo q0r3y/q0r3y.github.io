@@ -69,9 +69,9 @@
     
 /** PROJECT PAGE **/
 
-    .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; 
-    background: var(--mainColor); padding: 0 10px 0 10px;}
-    .project p {padding: 0 10px 0 10px; -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
+    .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor);}
+    .project > * {padding: 0 10px 0 10px;}
+    .project p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
     .projectImage {display: none; padding-top: 0.75em;}
 
     .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
