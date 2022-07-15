@@ -48,7 +48,7 @@ function postRepos() {
 
         $repoName.href = element.html_url;
         $repoName.innerText = element.name;
-        $repoUpdated.innerText = `${lastPush.getFullYear()}_${lastPush.getMonth()}_${lastPush.getDate()}`;
+        $repoUpdated.innerText = `${lastPush.getFullYear()}/${lastPush.getMonth()}/${lastPush.getDate()}`;
         $repoLang.innerText = element.language;
         $repoLang.style.color = setColor(element.language);
         $repoDesc.innerText = element.description;
