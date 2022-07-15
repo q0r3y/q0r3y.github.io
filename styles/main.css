@@ -50,7 +50,7 @@
     .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
     .card {display: none;}  
     
-    .social {width: 4em; height: 4em;}
+    .social {width: 3.5em; height: 3.5em;}
 }
 
 @media only screen and (max-width: 500px) {
