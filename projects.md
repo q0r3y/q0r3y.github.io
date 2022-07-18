@@ -60,7 +60,7 @@ css: projects.css
   </div>
   <div class="project">
     <h1><a href="" class="link">PROJECT 1</a><span>2022/07/14</span></h1>
-    <img src="images/NewImage24.png" width="600" class="projectImage" alt="pictureName">
+    <img src="/assets/images/NewImage24.png" width="600" class="projectImage" alt="pictureName">
     <div class="card">
       <img src="/assets/images/NewImage24.png" width="600" alt="pictureName">
       <img src="/assets/images/NewImage24.png" width="600" alt="pictureName">
