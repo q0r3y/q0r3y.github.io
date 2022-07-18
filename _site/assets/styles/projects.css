@@ -1,0 +1,15 @@
+ /*************************************************************
+    _______  _____   ______ _______ __   __   _______ _     _
+    |       |     | |_____/ |______   \_/     |______ |_____|
+    |_____  |_____| |    \_ |______    |    . ______| |     |
+
+**************************************************************/
+
+    .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor);}
+    .project h1 {padding: 0 10px 0 10px;}
+    .project p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); padding: 0 10px 0 10px;}
+    .projectImage {display: none; padding-top: 0.75em;}
+    .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
+    grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column; scrollbar-color: var(--textColor1) var(--mainColor);
+    scrollbar-width: thin; padding-top: 0.75em; }
+    

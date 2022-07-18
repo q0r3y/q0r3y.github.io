@@ -31,7 +31,6 @@ const setColor = function (language) {
 function postRepos() {
     $latestWork = document.getElementById('repos');
     repoData.forEach(element => {
-        console.log(element);
 
         const $repoDiv = document.createElement('div');
         const $repoName = document.createElement('a');

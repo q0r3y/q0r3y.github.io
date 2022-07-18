@@ -1,0 +1,62 @@
+ /*************************************************************
+    _______  _____   ______ _______ __   __   _______ _     _
+    |       |     | |_____/ |______   \_/     |______ |_____|
+    |_____  |_____| |    \_ |______    |    . ______| |     |
+
+**************************************************************/
+
+    :root {--linkColor: #fe8019; --highlightColor: #689d6a; --mainColor: #282828; --textColor1: #928374; 
+    --textColor2: #c8c8c8; --langColor: #b16286;}
+
+    *::selection {background: var(--highlightColor)}
+    ::-webkit-scrollbar {height: 0.5em; background: var(--mainColor);}
+    ::-webkit-scrollbar-thumb {background: var(--textColor1);}
+
+    #background {z-index: -1; position: fixed; padding-top: 19em; height: 40%; width: 40%; transform: rotate(90deg); 
+    filter: invert(32%) sepia(42%) saturate(4916%) hue-rotate(344deg) brightness(78%) contrast(106%);}
+
+    body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier;
+    font-weight: 400; font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; 
+    max-width: 960px;}
+
+    header {padding: 1% 0 1% 0; text-align: right; margin: 1.333% 0 1.333% 0; border-bottom: 1px var(--textColor1) solid;}
+    header a {text-decoration: none; color: var(--textColor1); font-size: 110%;}
+    header a.current {color: var(--linkColor); text-decoration: overline;}
+    .link:hover {color: var(--linkColor); text-decoration: overline;}
+
+    h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
+    h1 a {text-decoration: none; color: var(--textColor1); font-size: 100%; font-weight: normal;}
+    span {float: right;}
+
+    main {height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 15px;}
+
+    footer {text-align: right; border-top: 1px var(--textColor1) solid; padding-top: 10px; padding-bottom: 10px}
+    .social {filter: invert(73%) sepia(15%) saturate(444%) hue-rotate(356deg) brightness(83%) contrast(85%);
+    width: 2.5em; height: 2.5em;}
+
+@media only screen and (max-width:725px) {
+    main {margin-top: 15px; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
+    grid-gap: 0.75em; margin-bottom: 15px;}
+    #background {display: none;}
+
+    #about {grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}
+    #about h1 {text-align: left;}
+    #portrait {grid-column: 1/-1; grid-row: 1; display: none;}
+    #portraitMobile {display: block; width: 11em; height: 11em; float: right;}
+    #repos {grid-row: 2; grid-column: 1/-1;}
+    #blogSnip {grid-row: 3; grid-row: 3; border: 1px var(--textColor1) solid; grid-column: 1/-1;}
+    #projectSnip {grid-row:4; grid-column: 1/-1;}
+
+    .projectImage {display:block; margin: auto; width: 90%; height: auto;}
+    .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
+    .card {display: none;}  
+    
+    .social {width: 3.5em; height: 3.5em;}
+}
+
+@media only screen and (max-width: 500px) {
+    body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: 'Share Tech Mono', Monospace, Courier;
+    font-weight: 400; font-size: 14px; color: var(--textColor2); background: var(--mainColor); width: 95%; 
+    max-width: 960px;}
+}
