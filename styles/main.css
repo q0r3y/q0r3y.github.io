@@ -9,6 +9,8 @@
     --textColor2: #c8c8c8; --langColor: #b16286;}
 
     *::selection {background: var(--highlightColor)}
+    ::-webkit-scrollbar {height: 0.5em; background: var(--mainColor);}
+    ::-webkit-scrollbar-thumb {background: var(--textColor1);}
 
     #background {z-index: -1; position: fixed; padding-top: 19em; height: 40%; width: 40%; transform: rotate(90deg); 
     filter: invert(32%) sepia(42%) saturate(4916%) hue-rotate(344deg) brightness(78%) contrast(106%);}

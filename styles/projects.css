@@ -12,6 +12,4 @@
     .card {margin: 0px 10px 0px 10px; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
     grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column; scrollbar-color: var(--textColor1) var(--mainColor);
     scrollbar-width: thin; padding-top: 0.75em; }
-    ::-webkit-scrollbar {height: 0.5em; background: var(--mainColor);}
-    ::-webkit-scrollbar-thumb {background: var(--textColor1);}
     
