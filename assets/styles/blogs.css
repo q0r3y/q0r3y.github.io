@@ -12,4 +12,4 @@
 
     /*** BLOG PAGE ***/
     #blog {grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 1em 0 1em;}
+    padding: 0 1em 0 1em; margin-top: 0.75em; margin-bottom: 0.75em;}

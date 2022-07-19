@@ -5,16 +5,19 @@
 
 **************************************************************/
 
-    .project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor);}
-    .project h1 {padding: 0 1em 0 1em;}
-    .project p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); padding: 0 1em 0 1em;}
-    .projectImage {display: none; padding-top: 0.75em;}
+    .projects {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 1em 0 1em;}
+    .projects p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
+    .projectImage {display: none; padding-top: 1em;}
     .card {margin: 0 1em 0 1em; display: grid; grid-template-columns: 1fr; grid-template-rows: 1;
-    grid-gap: var(--gridGap); overflow-x: scroll; grid-auto-flow: column; scrollbar-color: var(--textColor1) var(--mainColor);
-    scrollbar-width: thin; padding-top: 0.75em;}
+    grid-gap: 0.75em; overflow-x: scroll; grid-auto-flow: column; scrollbar-color: var(--textColor1) var(--mainColor);
+    scrollbar-width: thin; padding-top: 1em;}
+
+    #project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 1em 0 1em;
+    margin-top: 0.75em; margin-bottom: 0.75em;}
 
     @media only screen and (max-width:725px) {  
-        .projectImage {display:block; margin: auto; width: 90%; height: auto;}
+        img {display: none;}
+        .projectImage {display:none; margin: auto; width: auto; height: auto;}
         .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
         .card {display: none;}  
     }

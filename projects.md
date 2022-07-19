@@ -5,7 +5,7 @@ style: projects.css
 ---
 <main>
   {% for post in site.categories.projects %}
-  <div class="project">
+  <div class="projects">
   <h1><a href="{{ post.url }}" class="link">{{ post.title }}</a><span>{{ post.date | date: "%Y/%m/%d" }}</span></h1>
   <div class="card">
   {% for image in site.static_files %}
