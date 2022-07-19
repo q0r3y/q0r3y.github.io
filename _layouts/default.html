@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <div id="background"><img src="/assets/images/1709188.svg" alt="backgroundIMG"></div>
+  {% if page.script %}
   <body onload="main()">
+  {% else %}
+  <body>
+  {% endif %}
+  <div id="background"><img src="/assets/images/1709188.svg" alt="backgroundIMG"></div>
     {% include navigation.html %}
     {{ content }}
     {% include footer.html %}

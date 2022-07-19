@@ -2,6 +2,7 @@
 title: HOME
 layout: default
 css: home.css
+script: home.js
 ---
 <main>
     <div id="about">
