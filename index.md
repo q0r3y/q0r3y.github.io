@@ -20,10 +20,10 @@ style: home.css
     <h1><a href="https://www.github.com/q0r3y" target="_blank" class="link"> GITHUB | LATEST </a></h1>
     </div>
     <div id="blogSnip">
-    <h1><a href="{{ site.posts.first.url }}" class="link">BLOGS | {{ site.posts.first.title | truncatewords: 5 | upcase }}</a>
-    <span>{{ site.posts.first.date | date: "%Y/%m/%d"}}</span>
+    <h1><a href="{{ site.categories.blogs.first.url }}" class="link">BLOGS | {{ site.categories.blogs.first.title | truncatewords: 5 | upcase }}</a>
+    <span>{{ site.categories.blogs.first.date | date: "%Y/%m/%d"}}</span>
     </h1>
-     <p> {{ site.posts.first.excerpt | strip_html | truncatewords: 125 }} </p>
+     <p> {{ site.categories.blogs.first.excerpt | strip_html | truncatewords: 125 }} </p>
     </div>
     <div id="projectSnip">
     <h1><a href="projects.html" class="link">PROJECTS | PROJECT 4 </a><span>2022/07/14</span></h1>
