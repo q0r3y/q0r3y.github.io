@@ -28,16 +28,16 @@
     h1 a {text-decoration: none; color: var(--textColor1); font-size: 100%; font-weight: normal;}
     span {float: right;}
 
-    main {height: 100%; margin-top: 15px; display:grid; grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 15px;}
+    main {height: 100%; margin-top: 0.75em; display:grid; grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 0.75em;}
 
     footer {text-align: right; border-top: 1px var(--textColor1) solid; padding-top: 10px; padding-bottom: 10px}
     .social {filter: invert(73%) sepia(15%) saturate(444%) hue-rotate(356deg) brightness(83%) contrast(85%);
     width: 2.5em; height: 2.5em;}
 
 @media only screen and (max-width:725px) {
-    main {margin-top: 15px; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
-    grid-gap: 0.75em; margin-bottom: 15px;}
+    main {margin-top: 0.75em; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
+    grid-gap: 0.75em; margin-bottom: 0.75em;}
     #background {display: none;}
 
     #about {grid-column: 1/-1; grid-row: 1; border: 1px var(--textColor1) solid;}

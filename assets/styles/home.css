@@ -6,14 +6,14 @@
 **************************************************************/
 
     #about {grid-column: 3fr; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px; grid-column: 1/4;}
+    padding: 0 1em 0 1em; grid-column: 1/4;}
     #portraitMobile {display: none;}
 
     #portrait {border: 1px var(--textColor1) solid; grid-column: 4/-1;}
     #portrait img {width: 14em; height: 14em;}
 
     #repos {grid-column: 1/3; display: grid; grid-template-rows: auto repeat(4, auto); grid-gap: 0.75em; 
-    border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 0.75em 0.75em 0.75em;}
+    border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 1em 1em 1em;}
 
     .repo {display: grid; text-align: left; grid-template-rows: auto auto auto; grid-template-columns: auto auto;
     margin-bottom: 0; padding: 0; border: 1px var(--textColor1) solid;}
@@ -24,9 +24,9 @@
     .repoDesc {grid-column: 1/-1;}
 
     #blogSnip {grid-column: 3/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px;}
+    padding: 0 1em 0 1em;}
     #blogSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
 
     #projectSnip { grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 10px 0 10px;}
+    padding: 0 1em 0 1em;}
     #projectSnip p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
