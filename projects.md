@@ -1,7 +1,7 @@
 ---
 title: PROJECTS
 layout: default
-css: projects.css
+style: projects.css
 ---
 <main>
   <div class="project">

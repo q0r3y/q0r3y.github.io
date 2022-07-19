@@ -1,7 +1,7 @@
 ---
 title: BLOGS
 layout: default
-css: blogs.css
+style: blogs.css
 ---
 <main>
   {% for post in site.posts %}

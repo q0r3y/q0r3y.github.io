@@ -2,7 +2,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }} / {{ page.title }}</title>
-    <link rel="stylesheet" href="/assets/styles/{{ page.css }}">
+    {% if page.style %}
+    <link rel="stylesheet" href="/assets/styles/{{ page.style }}">
+    {% elsif layout.style %}
+    <link rel="stylesheet" href="/assets/styles/{{ layout.style }}">
+    {% endif %}
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
     {% if page.script %}
