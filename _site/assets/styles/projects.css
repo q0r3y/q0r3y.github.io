@@ -15,6 +15,8 @@
     #project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); padding: 0 1em 0 1em;
     margin-top: 0.75em; margin-bottom: 0.75em;}
 
+    #project img {margin: 0 1em 0 1em;}
+
     @media only screen and (max-width:725px) {  
         img {display: none;}
         .projectImage {display:none; margin: auto; width: auto; height: auto;}
