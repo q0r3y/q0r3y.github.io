@@ -18,7 +18,7 @@ script: home.js
     <h1><a href="https://www.github.com/q0r3y" target="_blank" class="link"> GITHUB | LATEST </a></h1>
     </div>
     <div id="blogSnip">
-    <h1><a href="{{site.posts.first.url}}" class="link">BLOGS | {{ site.posts.first.title | truncatewords: 5 }}</a>
+    <h1><a href="{{ site.posts.first.url }}" class="link">BLOGS | {{ site.posts.first.title | truncatewords: 5 }}</a>
     <span>{{ site.posts.first.date | date: "%Y/%m/%d"}}</span>
     </h1>
      <p> {{ site.posts.first.excerpt | strip_html | truncatewords: 125 }} </p>
