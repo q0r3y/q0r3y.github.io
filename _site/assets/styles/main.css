@@ -15,9 +15,8 @@
     #background {z-index: -1; position: fixed; padding-top: 19em; height: 40%; width: 40%; transform: rotate(90deg); 
     filter: invert(32%) sepia(42%) saturate(4916%) hue-rotate(344deg) brightness(78%) contrast(106%);}
 
-    body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier;
-    font-weight: 400; font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; 
-    max-width: 960px;}
+    body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier; font-weight: 400; 
+    font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; max-width: 960px;}
 
     header {padding: 1% 0 1% 0; text-align: right; margin: 1.333% 0 1.333% 0; border-bottom: 1px var(--textColor1) solid;}
     header a {text-decoration: none; color: var(--textColor1); font-size: 110%;}
@@ -25,11 +24,15 @@
     .link:hover {color: var(--linkColor); text-decoration: overline;}
 
     h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
+    h2 {text-align: left; margin-top: 0.5em; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
     h1 a {text-decoration: none; color: var(--textColor1); font-size: 100%; font-weight: normal;}
     span {float: right;}
 
     main {height: 100%; margin-top: 0.75em; display:grid; grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 0.75em;}
+
+    figure img {display: block; margin: 0 auto 0 auto;}
+    figcaption {text-align: center;}
 
     footer {text-align: right; border-top: 1px var(--textColor1) solid; padding-top: 10px; padding-bottom: 10px}
     .social {filter: invert(73%) sepia(15%) saturate(444%) hue-rotate(356deg) brightness(83%) contrast(85%);
