@@ -18,7 +18,7 @@
     body {letter-spacing: 0.1px; padding: 0; margin: 0 auto; font-family: Monospace, Courier; font-weight: 400; 
     font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; max-width: 960px;}
 
-    header {padding: 1% 0 1% 0; text-align: right; margin: 1.333% 0 1.333% 0; border-bottom: 1px var(--textColor1) solid;}
+    header {padding: 1% 0 1% 0; text-align: right; margin: 0.75em 0 0.75em 0; border-bottom: 1px var(--textColor1) solid;}
     header a {text-decoration: none; color: var(--textColor1); font-size: 110%;}
     header a.current {color: var(--linkColor); text-decoration: overline;}
     .link:hover {color: var(--linkColor); text-decoration: overline;}
