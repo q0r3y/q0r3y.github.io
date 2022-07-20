@@ -7,6 +7,8 @@ style: projects.css
   {% for post in site.categories.projects %}
   <div class="projects">
   <h1><a href="{{ post.url }}" class="link">{{ post.title }}</a><span>{{ post.date | date: "%Y/%m/%d" }}</span></h1>
+  {% capture projectImage %}/assets/images/projects/{{ post.title }}/{{ post.image }}{% endcapture %}
+  <img src="{{ projectImage }}" width="600" alt="pictureName" class="projectImage">
   <div class="card">
   {% for image in site.static_files %}
   {% capture projectTitle %}{{ post.title }}{% endcapture %}
