@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-17T12:37:38-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">corey.sh</title><entry><title type="html">Example Blog 1</title><link href="http://localhost:4000/blogs/2024/11/17/Example-Blog-1.html" rel="alternate" type="text/html" title="Example Blog 1" /><published>2024-11-17T00:00:00-05:00</published><updated>2024-11-17T00:00:00-05:00</updated><id>http://localhost:4000/blogs/2024/11/17/Example-Blog-1</id><content type="html" xml:base="http://localhost:4000/blogs/2024/11/17/Example-Blog-1.html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus.
+Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla.
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin.
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis,
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci,
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.</p>
+
+<figure>
+    <img src="/assets/images/blogs/2024-11-17-Example-Blog-1/placeholder_image.png" width="90%" alt="pictureName" />
+    <figcaption>Image Caption</figcaption>
+</figure>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
+Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla. 
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin. 
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis, 
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.</p>]]></content><author><name></name></author><category term="blogs" /><summary type="html"><![CDATA[Example Blog]]></summary></entry><entry><title type="html">Example Project 1</title><link href="http://localhost:4000/projects/2024/11/17/Example-Project-1.html" rel="alternate" type="text/html" title="Example Project 1" /><published>2024-11-17T00:00:00-05:00</published><updated>2024-11-17T00:00:00-05:00</updated><id>http://localhost:4000/projects/2024/11/17/Example-Project-1</id><content type="html" xml:base="http://localhost:4000/projects/2024/11/17/Example-Project-1.html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus.
+Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla.
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin.
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis,
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci,
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.</p>
+
+<figure>
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="90%" alt="pictureName" />
+    <figcaption>Image Caption</figcaption>
+</figure>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
+Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla. 
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin. 
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis, 
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.</p>
+<figure>
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="600" alt="pictureName" />
+    <figcaption>Image Caption</figcaption>
+</figure>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
+Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla. 
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin. 
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis, 
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.</p>
+<figure>
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="600" alt="pictureName" />
+    <figcaption>Image Caption</figcaption>
+</figure>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
+Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla. 
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin. 
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis, 
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus.</p>
+<figure>
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="600" alt="pictureName" />
+    <figcaption>Image Caption</figcaption>
+</figure>
+<p>Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla. 
+Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin. 
+Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis, 
+porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
+nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.</p>]]></content><author><name></name></author><category term="projects" /><summary type="html"><![CDATA[Example Project]]></summary></entry></feed>

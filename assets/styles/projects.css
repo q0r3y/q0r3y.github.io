@@ -5,22 +5,18 @@
 
 **************************************************************/
 
-    .projects {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor);}
-    .projects h1 {padding: 0 1em 0 1em;}
-    .projects p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent); margin: 1em;}
-    .projectImage {display: none; padding-top: 1em;}
-    .card {display: grid; grid-template-columns: 1fr; grid-gap: 0.75em; overflow-x: scroll; grid-auto-flow: column; 
-    scrollbar-color: var(--textColor1) var(--mainColor); scrollbar-width: thin; margin: 1em;}
-
-    #project {max-width: 100%; grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
-    padding: 0 1em 0 1em; margin-top: 0.75em; margin-bottom: 0.75em;}
-    #project p {padding: 0 1em 0 1em;}
-
-    .projects img {max-width: 600px;}
-
+    /*** COREY.SH/PROJECTS ***/
+    .projects {grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
+    padding: 0 2em 0 2em;} /** Looks good but change on each page for consistency**/
+    .projects p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
+    .projectPreviewImage {display: block; width: 90%; margin: 1em auto 1em auto;}
+    
+    /*** PROJECT PAGE ***/
+    #project {grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
+    padding: 0 2em 0 2em; margin-top: 0.75em; margin-bottom: 0.75em;}
+    p {text-indent: 2%;}
+    
     @media only screen and (max-width:725px) {  
-        img {width: 90%;}
-        .projectImage {display:block; margin: auto; width: 90%; height: auto;}
-        .project {max-width: 100%; grid-template-columns: 1fr; border: 1px var(--textColor1) solid;}
-        .card {display: none;}  
+        .projects {padding: 0 1em 0 1em;}
+        #project {padding: 0 1em 0 1em;}
     }

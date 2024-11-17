@@ -4,6 +4,8 @@ style: projects.css
 ---
 <div id="project">
     <h1>{{ page.title }}<span>{{ page.date | date: "%Y/%m/%d" }}</span></h1>
-    <h2>author: {{ page.author }}</h2>
-    {{ content }}
+    {% assign paragraphs = content | split: "\n\n" %}
+    {% for paragraph in paragraphs %}
+        <p>{{ paragraph }}</p>
+    {% endfor %}
 </div>

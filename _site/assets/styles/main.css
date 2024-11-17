@@ -30,9 +30,10 @@
 
     main {height: 100%; margin-top: 0.75em; display:grid; grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 0.75em;}
-
-    figure img {display: block; margin: 0 auto 0 auto;}
-    figcaption {text-align: center;}
+    
+    figure { margin: 1% auto 1% auto;}
+    figure img {display: block; margin: auto;}
+    figcaption {text-align: center;  margin: 1% auto 1% auto;}
 
     footer {text-align: right; border-top: 1px var(--textColor1) solid; padding-top: 10px; padding-bottom: 10px}
     .social {filter: invert(73%) sepia(15%) saturate(444%) hue-rotate(356deg) brightness(83%) contrast(85%);
