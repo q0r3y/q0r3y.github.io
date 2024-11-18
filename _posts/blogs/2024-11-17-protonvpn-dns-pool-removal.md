@@ -1,6 +1,6 @@
 ---
 title: A Simple Workaround for ProtonVPN's DNS Pool Removals
-layout: blog
+layout: post
 date: 2024/11/17
 categories: blogs
 blogPath: 2024-11-17-protonvpn-dns-pool-removal

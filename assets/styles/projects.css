@@ -10,7 +10,6 @@
     padding: 0 2em 0 2em;} /** Looks good but change on each page for consistency**/
     .projects p {-webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);}
     .projectPreviewImage {display: block; width: 90%; margin: 1em auto 1em auto;}
-    #continue {display: block; text-align: center; padding-bottom: 1em;}
     
     /*** PROJECT PAGE ***/
     #project {grid-column: 1/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 

@@ -30,7 +30,7 @@ style: home.css
     </h1>
     <p> {{ site.categories.blogs.first.excerpt  }} </p>
     </div>
-    <!-- <div id="projectSnip">
+    <div id="projectSnip">
     <h1>PROJECTS | LATEST
       <div class="pageDate">{{ site.categories.projects.first.date | date: "%Y/%m/%d"}}</div>
       <h1>
@@ -39,5 +39,5 @@ style: home.css
       </h1>
     </h1>
     <p> {{ site.categories.projects.first.excerpt | strip_html | truncatewords: 125 }} </p>
-    </div> -->
+    </div>
 </main>
