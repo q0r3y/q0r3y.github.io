@@ -71,7 +71,7 @@ To solve this problem, I’ve developed a simple solution for OpenVPN users rely
 
 If you'd like to replicate a similar setup and randomize your OpenVPN connections, you can configure it by following these instructions. This guide assumes that OpenVPN is already set up on your firewall and configured to use ProtonVPN.
 
-Navigate to VPN -> OpenVPN -> Clients. Select your Client and input the following information.
+Navigate to VPN > OpenVPN > Clients. Select your Client and input the following information.
 
 <figure>
 Server host or address:
