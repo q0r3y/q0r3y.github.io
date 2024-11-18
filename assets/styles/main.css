@@ -5,6 +5,8 @@
 
 **************************************************************/
 
+    /** Rules that apply to every page **/
+
     :root {--linkColor: #fe8019; --highlightColor: #689d6a; --mainColor: #282828; --textColor1: #928374; 
     --textColor2: #c8c8c8; --langColor: #b16286;}
 
@@ -19,8 +21,10 @@
     font-size: 17px; color: var(--textColor2); background: var(--mainColor); width: 95%; max-width: 960px;}
 
     header {padding: 1% 0 1% 0; text-align: right; margin: 0.75em 0 0.75em 0; border-bottom: 1px var(--textColor1) solid;}
-    header a {text-decoration: none; color: var(--textColor1); font-size: 110%;}
     header a.current {color: var(--linkColor); text-decoration: overline;}
+
+    /** links **/
+    a {text-decoration: none; color: var(--textColor1); font-size: 110%;}
     .link:hover {color: var(--linkColor); text-decoration: overline;}
 
     h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
