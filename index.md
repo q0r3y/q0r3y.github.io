@@ -29,7 +29,6 @@ style: home.css
       </h1>
     </h1>
     <p> {{ site.categories.blogs.first.excerpt  }} </p>
-    <p>{{ site.categories.blogs.first.description }}</p>
     </div>
     <!-- <div id="projectSnip">
     <h1>PROJECTS | LATEST
