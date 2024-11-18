@@ -28,7 +28,7 @@ Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, s
 porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
 nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.
 <figure>
-    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="600" alt="pictureName">
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="90%" alt="pictureName">
     <figcaption>Image Caption</figcaption>
 </figure>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
@@ -39,7 +39,7 @@ Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, s
 porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci, 
 nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.
 <figure>
-    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="600" alt="pictureName">
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="90%" alt="pictureName">
     <figcaption>Image Caption</figcaption>
 </figure>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
@@ -51,7 +51,7 @@ porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consecte
 nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
 <figure>
-    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="600" alt="pictureName">
+    <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" width="90%" alt="pictureName">
     <figcaption>Image Caption</figcaption>
 </figure>
 Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 

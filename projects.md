@@ -9,7 +9,7 @@ style: projects.css
     <div class="projects">
     <h1>
       <a href="{{ post.url }}" class="link">{{ post.title }}</a>
-      <span>{{ post.date | date: "%Y/%m/%d" }}</span>
+      <div class="pageDate">{{ post.date | date: "%Y/%m/%d" }}</div>
     </h1>
     {% capture projectImage %}/assets/images/projects/{{ post.projectPath }}/{{ post.previewImage }}{% endcapture %}
     <img src="{{ projectImage }}" alt="{{ post.previewImage }}" class="projectPreviewImage">

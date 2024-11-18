@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          hljs.highlightAll();  // Highlight all code blocks after the page loads
+        });
+      </script>
 </head>
   
   <body>
@@ -34,7 +41,7 @@
     <div class="projects">
     <h1>
       <a href="/projects/2024/11/17/Example-Project-1.html" class="link">Example Project 1</a>
-      <span>2024/11/17</span>
+      <div class="pageDate">2024/11/17</div>
     </h1>
     
     <img src="/assets/images/projects/2024-11-17-Example-Project-1/placeholder_image.png" alt="placeholder_image.png" class="projectPreviewImage" />
@@ -52,7 +59,7 @@ nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In la
 
     <footer>
     <a href="https://www.github.com/q0r3y" target="_blank"><img src="/assets/images/github.svg" alt="github" class="social"></a>
-    <a href="email.html" target="_blank"><img src="/assets/images/email.svg" alt="email" class="social"></a>
+    <a href="/email.html" target="_blank"><img src="/assets/images/email.svg" alt="email" class="social"></a>
 </footer>
   </body>
 </html>

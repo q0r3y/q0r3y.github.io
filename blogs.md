@@ -9,11 +9,19 @@ style: blogs.css
     <div class="blogs">
     <h1>
       <a href="{{ post.url }}" class="link">{{ post.title }}</a>
-      <span>{{ post.date | date: "%Y/%m/%d" }}</span>
+      <div class="pageDate">{{ post.date | date: "%Y/%m/%d" }}</div>
     </h1>
     {% capture blogImage %}/assets/images/blogs/{{ post.blogPath }}/{{ post.previewImage }}{% endcapture %}
     <img src="{{ blogImage }}" alt="{{ post.previewImage }}" class="blogPreviewImage">
-    <p>{{ post.excerpt | strip_html | truncatewords: 125  }}</p>
-    </div>
-  {% endfor %}
+
+<!-- FIX THIS -->
+
+<p>ProtonVPN recently announced they are decommissioning the legacy DNS entries for country-based IP pools like "us.protonvpn.net" which are used in older OpenVPN configuration profiles. If you're using a newer profile, you're likely using a fixed IP address instead, so this may not apply to you.
+
+This change creates an issue for my setup. I use ProtonVPN with OpenVPN on my pfSense firewall, where I have a cron job that restarts the OpenVPN service according to the schedule I set. The cron job ensures that I get a new random IP address from ProtonVPN’s DNS pool each time the service restarts. However, with the removal of the legacy DNS pools, this option is no longer available.</p>
+
+<!-- <p>{{ post.excerpt | strip_html | truncatewords: 125  }}</p> -->
+</div>
+{% endfor %}
+
 </main>

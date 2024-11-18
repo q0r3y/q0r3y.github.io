@@ -3,7 +3,7 @@ layout: default
 style: blogs.css
 ---
 <div id="blog">
-    <h1>{{ page.title }}<span>{{ page.date | date: "%Y/%m/%d" }}</span></h1>
+    <h1>{{ page.title }}<div class="pageDate">{{ page.date | date: "%Y/%m/%d" }}</div></h1>
     {% assign paragraphs = content | split: "\n\n" %}
     {% for paragraph in paragraphs %}
         <p>{{ paragraph }}</p>

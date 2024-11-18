@@ -22,22 +22,23 @@ style: home.css
     </div>
     <div id="blogSnip">
     <h1>BLOGS | LATEST
-      <span>{{ site.categories.blogs.first.date | date: "%Y/%m/%d"}}</span>
+      <div class="pageDate">{{ site.categories.blogs.first.date | date: "%Y/%m/%d"}}</div>
       <h1>
-        <a href="{{ site.categories.blogs.first.url }}" class="link">{{ site.categories.blogs.first.title | upcase }}
+        <a href="{{ site.categories.blogs.first.url }}" class="link">{{ site.categories.blogs.first.title }}
         </a>
       </h1>
     </h1>
-    <p> {{ site.categories.blogs.first.excerpt | strip_html | truncatewords: 125 }} </p>
+    <p> {{ site.categories.blogs.first.excerpt  }} </p>
+    <p>{{ site.categories.blogs.first.description }}</p>
     </div>
-    <div id="projectSnip">
+    <!-- <div id="projectSnip">
     <h1>PROJECTS | LATEST
-      <span>{{ site.categories.projects.first.date | date: "%Y/%m/%d"}}</span>
+      <div class="pageDate">{{ site.categories.projects.first.date | date: "%Y/%m/%d"}}</div>
       <h1>
-        <a href="{{ site.categories.projects.first.url }}" class="link">{{ site.categories.projects.first.title | upcase }}
+        <a href="{{ site.categories.projects.first.url }}" class="link">{{ site.categories.projects.first.title }}
         </a>
       </h1>
     </h1>
     <p> {{ site.categories.projects.first.excerpt | strip_html | truncatewords: 125 }} </p>
-    </div>
+    </div> -->
 </main>

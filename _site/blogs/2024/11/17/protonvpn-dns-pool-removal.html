@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to fix the 'us.protonvpn.net' DNS pool removal issue with this simple workaround, and restore stable internet connectivity with ProtonVPN.">
+    <title>corey.sh / A Simple Workaround for ProtonVPN's DNS Pool Removals</title>
+    
+    <link rel="stylesheet" href="/assets/styles/blogs.css">
+    
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          hljs.highlightAll();  // Highlight all code blocks after the page loads
+        });
+      </script>
+</head>
+  
+  <body>
+  
+  <div id="background"><img src="/assets/images/1709188.svg" alt="backgroundIMG"></div>
+    <header>
+    
+    <a href="/index.html" class="link">--.- -.- -.-- HOME</a>
+    
+    <a>/</a>
+    
+    <a href="/blogs.html" class="link">BLOGS</a>
+    
+    <a>/</a>
+    
+    <a href="/projects.html" class="link">PROJECTS</a>
+    
+</header>
+    <div id="blog">
+    <h1>A Simple Workaround for ProtonVPN's DNS Pool Removals<div class="pageDate">2024/11/17</div></h1>
+    
+    
+        <p><figure>
+    <img src="/assets/images/blogs/2024-11-17-protonvpn-dns-pool-removal/protonvpn_announcement.png" width="90%" alt="pictureName" />
+    <figcaption><i>ProtonVPN Announcement</i></figcaption>
+</figure>
+
+<p>ProtonVPN recently announced they are decommissioning the legacy DNS entries for country-based IP pools like “us.protonvpn.net” which are used in older OpenVPN configuration profiles. If you’re using a newer profile, you’re likely using a fixed IP address instead, so this may not apply to you.</p>
+
+<p>This change creates an issue for my setup. I use ProtonVPN with OpenVPN on my pfSense firewall, where I have a cron job that restarts the OpenVPN service according to the schedule I set. The cron job ensures that I get a new random IP address from ProtonVPN’s DNS pool each time the service restarts. However, with the removal of the legacy DNS pools, this option is no longer available.</p>
+
+<p>ProtonVPN recommends switching to WireGuard, which offers better performance, security, and a more efficient codebase. However, the same issue persists with WireGuard: since your private key is tied to a specific ProtonVPN server, you won’t have the option to randomly rotate IPs. Instead, you’ll need to configure multiple tunnels in pfSense and switch between them manually.</p>
+
+<h1 id="the-solution">The Solution</h1>
+
+<p>To solve this problem, I’ve developed a simple solution for OpenVPN users relying on ProtonVPN’s DNS pools. I’ve created a Cloudflare Worker that is scheduled to run every minute, fetching a random row from a D1 SQL database and updating the “us.protonvpn” A record at corey.sh with the corresponding IP address. Currently, the IP addresses in the D1 database are manually populated using a script that queries Proton’s API and extracts the node IPs. In the near future, I plan to automate this process with an additional worker, ensuring that the database always contains up-to-date node information. This allows me to continue rotating IP addresses without disruption.</p>
+
+<figure>
+<figcaption><i>Cloudflare Worker code</i></figcaption>
+<pre><code class="language-javascript">export default {
+  async scheduled(event, env) {
+    const { zoneId, recordId, authToken, vpnNodesDb, cloudflareEmail } = env;
+    const cloudflareUrl = 
+     `https://api.cloudflare.com/client/v4/zones/${zoneId}/dns_records/${recordId}`;
+    const queryRandomAddress = 
+     `SELECT * FROM protonVpnNodesUs ORDER BY RANDOM() LIMIT 1`;
+    const vpnNodeUs = await vpnNodesDb.prepare(queryRandomAddress).first();
+    const dateTime = new Date().toISOString();
+
+    const requestData = {
+      comment: `${dateTime}: Worker updated node address.`,
+      name: "us.protonvpn",
+      proxied: false,
+      settings: {},
+      tags: [],
+      ttl: 60,
+      content: vpnNodeUs.ipAddress,
+      type: "A",
+    };
+
+    const headers = {
+      "Content-Type": "application/json",
+      "X-Auth-Email": cloudflareEmail,
+      Authorization: `Bearer ${authToken}`,
+    };
+
+    await fetch(cloudflareUrl, {
+      method: "PATCH",
+      headers: headers,
+      body: JSON.stringify(requestData),
+    })
+      .then((response) =&gt; response.json())
+      .then((data) =&gt; console.log("Success:", data))
+      .catch((error) =&gt; console.error("Error:", error));
+
+},
+};
+</code></pre>
+
+</figure>
+
+<h1 id="pfsense-configuration">pfSense Configuration</h1>
+
+<p>If you’d like to replicate a similar setup and randomize your OpenVPN connections, you can configure it by following these instructions. This guide assumes that OpenVPN is already set up on your firewall and configured to use ProtonVPN.</p>
+
+<p>Navigate to VPN -&gt; OpenVPN -&gt; Clients. Select your Client and input the following information.</p>
+
+<figure>
+Server host or address:
+<pre><code class="language">us.protonvpn.corey.sh</code></pre>
+
+Custom Options:
+
+<pre><code class="language">tun-mtu 1500;
+tun-mtu-extra 32;
+mssfix 1450;
+reneg-sec 0;
+remote-cert-tls server;
+remote us.protonvpn.corey.sh 80;
+remote us.protonvpn.corey.sh 5060;
+remote us.protonvpn.corey.sh 4569;
+remote us.protonvpn.corey.sh 51820;
+</code></pre>
+<figcaption><i>pfSense OpenVPN client configuration</i></figcaption>
+</figure>
+
+<h1 id="cron-job-setup">Cron job setup</h1>
+
+<p>To set up a cron job on your pfSense firewall, you’ll first need to install the ‘cron’ package. You can do this by navigating to System &gt; Package Manager &gt; Available Packages, then searching for ‘cron.’ Once the package is installed, go to Services &gt; Cron and create a new cron schedule.</p>
+
+<p>Configure the schedule according to your preferences, and for the command, enter the following:</p>
+
+<pre><code class="language">/usr/local/sbin/pfSsh.php playback svc restart openvpn client 3</code></pre>
+
+<p>Be sure to replace the ‘3’ with the appropriate client number for your setup. In my case, ‘3’ corresponds to the third OpenVPN client configured on the firewall.</p>
+
+<p>While I plan to switch to WireGuard, this setup provides a reliable temporary solution that anyone can use in the meantime.</p>
+</p>
+    
+</div>
+    <footer>
+    <a href="https://www.github.com/q0r3y" target="_blank"><img src="/assets/images/github.svg" alt="github" class="social"></a>
+    <a href="/email.html" target="_blank"><img src="/assets/images/email.svg" alt="email" class="social"></a>
+</footer>
+  </body>
+</html>

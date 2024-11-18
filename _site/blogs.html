@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="/assets/styles/main.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          hljs.highlightAll();  // Highlight all code blocks after the page loads
+        });
+      </script>
 </head>
   
   <body>
@@ -33,26 +40,31 @@
   
     <div class="blogs">
     <h1>
-      <a href="/blogs/2024/11/17/Example-Blog-1.html" class="link">Example Blog 1</a>
-      <span>2024/11/17</span>
+      <a href="/blogs/2024/11/17/protonvpn-dns-pool-removal.html" class="link">A Simple Workaround for ProtonVPN's DNS Pool Removals</a>
+      <div class="pageDate">2024/11/17</div>
     </h1>
     
-    <img src="/assets/images/blogs/2024-11-17-Example-Blog-1/placeholder_image.png" alt="placeholder_image.png" class="blogPreviewImage" />
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus.
-Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-Ut eget gravida sem. Aenean nec viverra libero. Maecenas sit amet malesuada velit. Nulla ultrices sollicitudin libero, a viverra nulla.
-Praesent id neque euismod, iaculis ex vel, ultricies est. Morbi sollicitudin vitae ipsum in sollicitudin.
-Ut dui diam, semper eu vestibulum vel, lacinia mollis magna. Nullam nisi quam, semper ut porttitor sagittis,
-porttitor ac ex. Pellentesque ut fringilla justo. Sed sagittis, quam ut consectetur facilisis, mauris lacus venenatis orci,
-nec pellentesque nulla nibh in turpis. Maecenas rhoncus tincidunt viverra. In lacinia consequat libero eget euismod.
-</p>
-    </div>
-  
+    <img src="/assets/images/blogs/2024-11-17-protonvpn-dns-pool-removal/protonvpn_announcement.png" alt="protonvpn_announcement.png" class="blogPreviewImage" />
+
+<!-- FIX THIS -->
+
+<p>ProtonVPN recently announced they are decommissioning the legacy DNS entries for country-based IP pools like "us.protonvpn.net" which are used in older OpenVPN configuration profiles. If you're using a newer profile, you're likely using a fixed IP address instead, so this may not apply to you.
+
+This change creates an issue for my setup. I use ProtonVPN with OpenVPN on my pfSense firewall, where I have a cron job that restarts the OpenVPN service according to the schedule I set. The cron job ensures that I get a new random IP address from ProtonVPN’s DNS pool each time the service restarts. However, with the removal of the legacy DNS pools, this option is no longer available.</p>
+
+<!-- <p>
+    
+    ProtonVPN Announcement
+
+</p> -->
+</div>
+
+
 </main>
 
     <footer>
     <a href="https://www.github.com/q0r3y" target="_blank"><img src="/assets/images/github.svg" alt="github" class="social"></a>
-    <a href="email.html" target="_blank"><img src="/assets/images/email.svg" alt="email" class="social"></a>
+    <a href="/email.html" target="_blank"><img src="/assets/images/email.svg" alt="email" class="social"></a>
 </footer>
   </body>
 </html>

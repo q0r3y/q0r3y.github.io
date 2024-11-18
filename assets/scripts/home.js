@@ -2,7 +2,10 @@ let repoData = [];
 
 async function getRepos() {
   const sortedRepos = await fetch(
-    "https://api.github.com/users/q0r3y/repos?sort=updated&per_page=4"
+    "https://api.github.com/users/q0r3y/repos?sort=updated&per_page=4",
+    {
+      method: "GET",
+    }
   );
   await sortedRepos.json().then((data) => {
     repoData = data;
@@ -45,7 +48,9 @@ function postRepos() {
 
     $repoName.href = element.html_url;
     $repoName.innerText = element.name;
-    $repoUpdated.innerText = `${lastPush.getFullYear()}/${lastPush.getMonth()}/${lastPush.getDate()}`;
+    $repoUpdated.innerText = `${lastPush.getFullYear()}/${
+      lastPush.getMonth() + 1
+    }/${lastPush.getDate()}`;
     $repoLang.innerText = element.language;
     $repoLang.style.color = setColor(element.language);
     $repoDesc.innerText = element.description;
