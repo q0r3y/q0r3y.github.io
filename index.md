@@ -18,7 +18,7 @@ style: home.css
     </div>
     <div id="portrait"><img src="/assets/images/BOOM_Headshot.png" alt="portrait"></div>
     <div id="repos">
-    <h1><a href="https://www.github.com/q0r3y" target="_blank" class="link"> GITHUB | LATEST </a></h1>
+      <h1><a href="https://www.github.com/q0r3y" target="_blank" class="link"> GITHUB | LATEST </a></h1>
     </div>
     <div id="blogSnip">
     <h1>BLOGS | LATEST
@@ -30,7 +30,7 @@ style: home.css
     </h1>
     <p> {{ site.categories.blogs.first.excerpt  }} </p>
     </div>
-    <div id="projectSnip">
+    <!-- <div id="projectSnip">
     <h1>PROJECTS | LATEST
       <div class="postDate">{{ site.categories.projects.first.date | date: "%Y/%m/%d"}}</div>
       <h1>
@@ -39,5 +39,5 @@ style: home.css
       </h1>
     </h1>
     <p> {{ site.categories.projects.first.excerpt | strip_html | truncatewords: 125 }} </p>
-    </div>
+    </div> -->
 </main>
