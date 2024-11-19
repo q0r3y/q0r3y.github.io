@@ -3,7 +3,7 @@ title: Example Project 1
 layout: post
 date: 2024/11/17
 categories: projects
-projectPath: 2024-11-17-Example-Project-1
+postPath: 2024-11-17-Example-Project-1
 previewImage: placeholder_image.png
 description: Example Project
 ---

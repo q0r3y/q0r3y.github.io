@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% if page.title == "BLOGS" %}
+  {% assign category = site.categories.blogs %}
+{% elsif page.title == "PROJECTS" %}
+  {% assign category = site.categories.projects %}
+{% endif %}
+
+<main>
+    {% for post in category %}
+      <div class="posts">
+        <div class="postInfo">
+          <h1 class="postTitle"><a href="{{ post.url }}" class="link">{{ post.title }}</a></h1>
+          <h1 class="postDate">{{ post.date | date: "%Y/%m/%d" }}</h1>
+        </div>
+      {% capture postImage %}
+      {{ page.imagesPath }}/{{ post.postPath }}/{{ post.previewImage }}
+      {% endcapture %}
+      <figure>
+        <img src="{{ postImage }}" alt="{{ post.previewImage }}" class="postPreviewImage">
+      </figure>
+      <p>{{ post.excerpt | strip_html | truncatewords: 125  }}</p>
+      <a class="link" id="continueReading" href="{{ post.url }}" >Continue Reading</a>
+      </div>
+    {% endfor %}
+  </main>

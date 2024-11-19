@@ -29,10 +29,12 @@
 
   h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
 
+  .postInfo {display: flex; justify-content: space-between; flex-wrap: wrap;}
+  .postTitle {float: left;}
   .postDate {float: right;}
 
   main {height: 100%; margin-top: 0.75em; display:grid; grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto auto; grid-gap: 0.75em; margin-bottom: 0.75em;}
+  grid-gap: 0.75em; margin-bottom: 0.75em;}
   
   figure {margin: 1% auto 1% auto; width: 100%;}
   figure img {display: block; margin: 1em auto 1em auto; width: 100%;}
