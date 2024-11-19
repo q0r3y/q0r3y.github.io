@@ -22,7 +22,7 @@ style: home.css
     </div>
     <div id="blogSnip">
     <h1>BLOGS | LATEST
-      <div class="pageDate">{{ site.categories.blogs.first.date | date: "%Y/%m/%d"}}</div>
+      <div class="postDate">{{ site.categories.blogs.first.date | date: "%Y/%m/%d"}}</div>
       <h1>
         <a href="{{ site.categories.blogs.first.url }}" class="link">{{ site.categories.blogs.first.title }}
         </a>
@@ -32,7 +32,7 @@ style: home.css
     </div>
     <div id="projectSnip">
     <h1>PROJECTS | LATEST
-      <div class="pageDate">{{ site.categories.projects.first.date | date: "%Y/%m/%d"}}</div>
+      <div class="postDate">{{ site.categories.projects.first.date | date: "%Y/%m/%d"}}</div>
       <h1>
         <a href="{{ site.categories.projects.first.url }}" class="link">{{ site.categories.projects.first.title }}
         </a>

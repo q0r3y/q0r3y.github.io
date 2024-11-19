@@ -1,19 +1,19 @@
 <header>
-    {% if page.title == "HOME" %}
+  {% if page.title == "HOME" %}
     <a href="/index.html" class="current link">--.- -.- -.-- HOME</a>
-    {% else %}
+  {% else %}
     <a href="/index.html" class="link">--.- -.- -.-- HOME</a>
-    {% endif %}
-    <a>/</a>
-    {% if page.title == "BLOGS" or page.layout == "blog" %}
+  {% endif %}
+  <a>/</a>
+  {% if page.title == "BLOGS" or page.layout == "blog" %}
     <a href="/blogs.html" class="current link">BLOGS</a>
-    {% else %}
+  {% else %}
     <a href="/blogs.html" class="link">BLOGS</a>
-    {% endif %}
-    <a>/</a>
-    {% if page.title == "PROJECTS" or page.layout == "project" %}
+  {% endif %}
+  <a>/</a>
+  {% if page.title == "PROJECTS" or page.layout == "project" %}
     <a href="/projects.html" class="current link">PROJECTS</a>
-    {% else %}
+  {% else %}
     <a href="/projects.html" class="link">PROJECTS</a>
-    {% endif %}
+  {% endif %}
 </header>
