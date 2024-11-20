@@ -26,6 +26,7 @@
   a {text-decoration: none; color: var(--textColor1); font-size: 100%;}
   .link:hover {color: var(--linkColor); text-decoration: overline;}
   #continueReading {display: block; text-align: center; padding-bottom: 1em;}
+  span {text-decoration: none; color: var(--textColor1); font-size: 100%;}
 
   h1 {text-align: left; margin-bottom: 0; text-decoration: none; color: var(--textColor1); font-size: 105%; font-weight: normal;}
 
