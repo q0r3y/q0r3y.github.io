@@ -4,13 +4,13 @@ layout: post
 date: 2024/11/17
 categories: blogs
 postPath: 2024-11-17-protonvpn-dns-pool-removal
-previewImage: protonvpn_announcement.png
+previewImage: protonvpn_announcement.webp
 containsCode: true
 description: Learn how to fix the 'us.protonvpn.net' DNS pool removal issue with this simple workaround, and setup pfSense to rotate random OpenVPN IP addresses.
 ---
 
 <figure>
-    <img src="/assets/images/blogs/2024-11-17-protonvpn-dns-pool-removal/protonvpn_announcement.png" width="90%" alt="pictureName">
+    <img src="/assets/images/blogs/2024-11-17-protonvpn-dns-pool-removal/protonvpn_announcement.webp" width="90%" alt="pictureName">
     <figcaption><i>ProtonVPN Announcement</i></figcaption>
 </figure>
 ProtonVPN recently announced they are decommissioning the legacy DNS entries for country-based IP pools like "us.protonvpn.net" which are used in older OpenVPN configuration profiles. If you're using a newer profile, you're likely using a fixed IP address instead, so this may not apply to you.

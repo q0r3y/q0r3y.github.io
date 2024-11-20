@@ -8,7 +8,7 @@ style: home.css
 <main>
     <div id="about">
     <h1>ABOUT</h1>
-    <img src="/assets/images/BOOM_Headshot.png" alt="portrait" id="portraitMobile">
+    <img src="/assets/images/BOOM_Headshot.webp" alt="portrait" id="portraitMobile">
     <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere vulputate lectus nec faucibus. 
         Integer tempus tempor eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
@@ -16,7 +16,7 @@ style: home.css
         a viverra nulla. Praesent id neque euismod, iaculis ex vel, ultricies est.
     </p>
     </div>
-    <div id="portrait"><img src="/assets/images/BOOM_Headshot.png" alt="portrait"></div>
+    <div id="portrait"><img src="/assets/images/BOOM_Headshot.webp" alt="portrait"></div>
     <div id="repos">
       <h1><a href="https://www.github.com/q0r3y" target="_blank" class="link"> GITHUB | LATEST </a></h1>
     </div>
