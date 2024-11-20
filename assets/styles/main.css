@@ -51,7 +51,7 @@
   padding: 0 2em 0 2em; margin-top: 0.75em; margin-bottom: 0.75em;}
 
   @media only screen and (max-width:725px) {
-      main {margin-top: 0.75em; grid-template-rows: repeat(4, auto); grid-template-columns: repeat(4, auto);
+      main {margin-top: 0.75em; grid-template-columns: repeat(4, auto);
       grid-gap: 0.75em; margin-bottom: 0.75em;}
       #background {display: none;}
       .posts {padding: 0 1em 0 1em;}
