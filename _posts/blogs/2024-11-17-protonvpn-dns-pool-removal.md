@@ -6,7 +6,7 @@ categories: blogs
 postPath: 2024-11-17-protonvpn-dns-pool-removal
 previewImage: protonvpn_announcement.png
 containsCode: true
-description: Learn how to fix the 'us.protonvpn.net' DNS pool removal issue with this simple workaround, and restore stable internet connectivity with ProtonVPN.
+description: Learn how to fix the 'us.protonvpn.net' DNS pool removal issue with this simple workaround, and setup pfSense to rotate random OpenVPN IP addresses.
 ---
 
 <figure>

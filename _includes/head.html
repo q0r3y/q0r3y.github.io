@@ -1,9 +1,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="corey.sh" />
+  <meta property="og:title" content="corey.sh / {{page.title}}" />
   <meta name="description" property="og:description" content="{% if page.excerpt %}{{ page.description | strip_html | truncate: 160 }}{% else %}{{ site.description | default: 'I break things. I fix things.' }}{% endif %}">
+  {% if page.previewImage %}
   <meta property="og:image" content="https://corey.sh/assets/images/{{page.categories}}/{{page.postPath}}/{{page.previewImage}}" />
+  {% endif %}
   <meta property="og:url" content="https://corey.sh{{ page.url }}" />
   <title>{{ site.title }} / {{ page.title }}</title>
   <link rel="stylesheet" href="/assets/styles/main.css">
