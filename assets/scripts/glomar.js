@@ -3,6 +3,8 @@
     return {
       screenSize: { w: window.screen.width, h: window.screen.height },
       language: navigator.language,
+      url: window.location.hostname,
+      page: window.location.pathname,
     };
   }
 
