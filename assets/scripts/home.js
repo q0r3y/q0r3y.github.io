@@ -1,5 +1,3 @@
-let repoData = [];
-
 async function getRepos() {
   const sortedRepos = await fetch(
     "https://api.github.com/users/q0r3y/repos?sort=updated&per_page=4",
@@ -7,9 +5,7 @@ async function getRepos() {
       method: "GET",
     }
   );
-  await sortedRepos.json().then((data) => {
-    repoData = data;
-  });
+  return sortedRepos.json();
 }
 
 const setColor = function (language) {
@@ -30,9 +26,9 @@ const setColor = function (language) {
   }
 };
 
-function postRepos() {
+function postRepos(repos) {
   $latestWork = document.getElementById("repos");
-  repoData.forEach((element) => {
+  repos.forEach((element) => {
     const $repoDiv = document.createElement("div");
     const $repoName = document.createElement("a");
     const $repoUpdated = document.createElement("p");
@@ -64,5 +60,18 @@ function postRepos() {
 }
 
 async function main() {
-  await getRepos().then(postRepos);
+  try {
+    const repos = await getRepos();
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", function () {
+        postRepos(repos);
+      });
+    } else {
+      postRepos(repos);
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
+
+main();

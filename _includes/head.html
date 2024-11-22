@@ -10,13 +10,13 @@
   <title>{{ site.title }} / {{ page.title }}</title>
   <link rel="stylesheet" href="/assets/styles/main.css">
   <link rel="icon" href="/assets/images/favicon-192x192.png">
+  {% if page.script %}
+  <script src="/assets/scripts/{{ page.script }}" type="text/javascript" defer></script>
+  {% endif %}
   {% if page.style %}
     <link rel="stylesheet" href="/assets/styles/{{ page.style }}">
   {% elsif layout.style %}
     <link rel="stylesheet" href="/assets/styles/{{ layout.style }}">
-  {% endif %}
-  {% if page.script %}
-    <script src="/assets/scripts/{{ page.script }}" type="text/javascript"></script>
   {% endif %}
   {% if page.containsCode %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/dark.min.css">
@@ -27,4 +27,5 @@
       });
     </script>
   {% endif %}
+  <script async src="/assets/scripts/glomar.js"></script>
 </head>
