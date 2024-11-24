@@ -103,3 +103,7 @@ Configure the schedule according to your preferences, and for the command, enter
 Be sure to replace the '3' with the appropriate client number for your setup. In my case, '3' corresponds to the third OpenVPN client configured on the firewall.
 
 While I plan to switch to WireGuard, this setup provides a reliable temporary solution that anyone can use in the meantime.
+
+# Edit (2024/11/24):
+
+I've moved the cloudflare worker to this Github repository: [https://github.com/q0r3y/protonvpn-dns](https://github.com/q0r3y/protonvpn-dns)
