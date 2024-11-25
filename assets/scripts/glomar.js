@@ -5,6 +5,7 @@
       language: navigator.language,
       url: window.location.hostname,
       page: window.location.pathname,
+      referrer: document.referrer,
     };
   }
 
