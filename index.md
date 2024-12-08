@@ -33,7 +33,7 @@ style: home.css
       <figure>
         <img src="{{ blogImage }}" alt="{{ latestBlog.previewImage }}" class="postPreviewImage">
       </figure>
-      <p>{{ latestBlog.excerpt | strip_html | truncatewords: 125  }}</p>
+      <p>{{ latestBlog.excerpt | truncatewords: 125  }}</p>
         <a class="link" id="continueReading" href="{{ latestBlog.url }}" >Continue Reading</a>
     </div>
     <!-- <div id="projectSnip">

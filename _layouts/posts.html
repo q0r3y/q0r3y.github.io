@@ -18,10 +18,7 @@ layout: default
       {% capture postImage %}
       {{ page.imagesPath }}/{{ post.postPath }}/{{ post.previewImage }}
       {% endcapture %}
-      <figure>
-        <img src="{{ postImage }}" alt="{{ post.previewImage }}" class="postPreviewImage">
-      </figure>
-      <p>{{ post.excerpt | strip_html | truncatewords: 125  }}</p>
+      <p>{{ post.excerpt | truncatewords: 125  }}</p>
       <a class="link" id="continueReading" href="{{ post.url }}" >Continue Reading</a>
       </div>
     {% endfor %}

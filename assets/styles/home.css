@@ -22,6 +22,7 @@
   .repoLang {justify-self: start;}
   .repoUpdated {justify-self: end; color: var(--textColor1);}
   .repoDesc {grid-column: 1/-1;}
+  .hiddenfromhome {display:none;}
 
   #blogSnip {grid-column: 3/-1; border: 1px var(--textColor1) solid; background: var(--mainColor); 
   padding: 0 1em 0 1em;}
